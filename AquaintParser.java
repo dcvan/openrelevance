@@ -32,15 +32,17 @@ public class AquaintParser {
 
 	public static void main(String[] args) {
 		try{
+			//Suppress log4j Warnings
 			System.setProperty("log4j.defaultInitOverride","true");
 			LogManager.resetConfiguration();
 			LogManager.getRootLogger().addAppender(new NullAppender());
 			
-			
+			//Parse AQUAINT data in XML format and convert them into JavaBeans
 			String filePath = "/home/dc/Openrel/data/aquaint/data.txt";
 			List<String> docs = splitDocuments(filePath);
 			List<AquaintBean> abs = toBeans(docs);
 			
+			//Connect Solr server and import the list of JavaBeans into Solr
 			SolrServer solr = new HttpSolrServer("http://localhost:9090");
 			solr.addBeans(abs);
 			solr.commit();
@@ -50,6 +52,7 @@ public class AquaintParser {
 		}
 	}
 	
+	
 	public static List<String> splitDocuments(String path)
 		throws IOException{
 			File file = new File(path);
@@ -57,6 +60,7 @@ public class AquaintParser {
 			BufferedReader br = new BufferedReader(fr);
 			List<String> docs = new ArrayList<String>();
 			
+			//Reference AQUAINT DTD
 			String header = "<?xml version=\"1.0\"?>\n"
 							+"<!DOCTYPE DOC SYSTEM \"aquaint.dtd\">\n";
 			String doc = new String(header);
