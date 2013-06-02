@@ -1,5 +1,0 @@
-<dependency>
-   <groupId>org.apache.solr</groupId>
-   <artifactId>solr-solrj</artifactId>
-   <version>4.x.x</version>
-</dependency>
