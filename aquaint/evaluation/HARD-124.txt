@@ -1,0 +1,15 @@
+<top>
+    
+<num> HARD-124 </num>
+    
+<title> Cell phone health hazard </title>
+
+<descr>
+How has research about the health risks of cell phones impacted the cell phone market? 
+</descr>
+      
+<narr>
+Information concerning research findings about the effects of cell phones on a person's health is on-topic. Also, reports about the effect of health warnings on cell phone demand are on-topic. New cell phone technology, unless it addresses the health issue, is off-topic. 
+</narr>
+
+</top>

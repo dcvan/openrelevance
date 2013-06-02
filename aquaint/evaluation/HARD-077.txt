@@ -1,0 +1,20 @@
+<top>
+    
+<num> HARD-077 </num>
+    
+<title>Insect-borne illnesses </title>
+
+<descr>
+How have Lyme Disease, Rocky Mountain spotted fever (RMSF) and the West Nile virus changed the way
+Americans interact with nature and/or the suburban landscape? 
+</descr>
+      
+<narr>
+Articles related to West Nile virus, RMSF and Lyme disease warnings
+are on-topic. Information about how people live during the summer months
+(barbecue, etc) and how this has changed due to fear of tick- and
+mosquito-borne diseases are on-topic. Stories about similar diseases
+outside of the US are off-topic.
+</narr>
+
+</top>

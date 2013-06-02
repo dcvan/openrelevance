@@ -1,0 +1,15 @@
+<top>
+    
+<num> HARD-187 </num>
+    
+<title> National Leadership Transitions </title>
+
+<descr>
+Which nations experienced transfers of power from one head of state to another and by which methods did these transfers occur?
+</descr>
+      
+<narr>
+Articles dealing with military coups, elections and resignations leading to the installment of new leadership in individual nations are considered acceptable. I would prefer documents that make mention of the causes underlying the various shifts in power, but sources treating elections not at the head-of-state level would be considered off-topic.   
+</narr>
+
+</top>

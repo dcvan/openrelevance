@@ -1,0 +1,15 @@
+<top>
+    
+<num> HARD-196 </num>
+    
+<title> IPO Activity </title>
+
+<descr>
+What types of companies and in which geographical areas made Initial Public Offerings of their stock?
+</descr>
+      
+<narr>
+Articles documenting specific IPO's as well as sources treating the reasons for any increases or decreases in the number and nature of IPO's are fair game. 
+</narr>
+
+</top>

@@ -1,0 +1,16 @@
+<top>
+    
+<num> HARD-115 </num>
+    
+<title> Virtual defense </title>
+
+<descr>
+How do armies, specifically the US Army, use virtual reality
+to train soldiers or to design new gear?
+</descr>
+      
+<narr>
+Articles about the use of virtual reality in the army in 1999 are on topic. Articles mentioning virtual reality in general, without clearly mentioning its use in the army, are not on topic.
+</narr>
+
+</top>

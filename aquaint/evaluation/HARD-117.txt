@@ -1,0 +1,23 @@
+<top>
+    
+<num> HARD-117 </num>
+    
+<title> US Civil Unrest </title>
+
+<descr>
+How was civil unrest in the US tackled by local authorities
+and police in the last year?
+</descr>
+      
+<narr>
+Documents related to the measures taken by the police to handle
+the civil unrest (curfews, etc.), especially in Seattle at the WTO talks,
+extent of damage due to the riots, news articles on the arrests of those
+involved, slow progress of the WTO talks in the wake of the riots are
+on-topic documents. Additionally, any information about other incidents of
+civil unrest/disobedience are on-topic, if they specifically address the
+way authorities tried to control the situations. Articles concerning
+similar incidents outside of the US are not on-topic. 
+</narr>
+
+</top>

@@ -1,0 +1,22 @@
+<top>
+    
+<num> HARD-116 </num>
+    
+<title>Genetic Modification technology </title>
+	
+<descr>
+Does GM technology provide a solution to world hunger?
+</descr>
+      
+<narr>
+Examples of on-topic documents may address the following:
+1. organic farming vs GM technology
+2. yields per hectare from GM technology
+3. GM crops and environment
+4. World agricultural production 
+5. transgenics in agriculture
+6. farming lobbies and interest groups
+7. sustainable farming practices
+</narr>
+
+</top>

@@ -1,0 +1,16 @@
+<top>
+    
+<num> HARD-231 </num>
+    
+<title> Parental advisory music </title>
+
+<descr>
+How has the implementation of parental advisory warnings affected music record sales? 
+</descr>
+      
+<narr>
+Articles should compare record sales resulting before to after the
+implementation of parental advisory labels. 
+</narr>
+
+</top>

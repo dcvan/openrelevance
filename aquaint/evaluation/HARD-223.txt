@@ -1,0 +1,15 @@
+<top>
+    
+<num> HARD-223 </num>
+    
+<title> Sports Scandals </title>
+
+<descr>
+To what extent have scandals in professional and amateur athletics tarnished the images of the various athletes and organizations involved in them?
+</descr>
+      
+<narr>
+Stories dealing with individual sporting scandals as well as articles outlining general trends in and fallout from sports scandals are on-topic. 
+</narr>
+
+</top>

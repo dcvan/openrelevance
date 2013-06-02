@@ -1,0 +1,20 @@
+<top>
+    
+<num> HARD-234 </num>
+    
+<title> Global Wage Remittance </title>
+
+<descr> 
+What is the role of multinational companies in facilitating
+remittances, or money sent from migrants in one country to their families
+back home?
+</descr>
+      
+<narr>
+On-topic documents include those about the economic and social
+implications of global wage remittances, especially the role of companies
+like Western Union in facilitating wage remittances.  Policies regarding
+wage remittances and general discussions of their impact are also on topic.
+</narr>
+
+</top>

@@ -1,0 +1,18 @@
+<top>
+    
+<num> HARD-069 </num>
+    
+<title> Environmental protection </title>
+
+<descr>
+What measures did governments take to protect the environment and reduce pollution in the last year?
+</descr>
+      
+<narr>
+Articles about new laws passed or efforts made in 1999 to protect the environment are
+on-topic. Articles mentioning statistics of the level
+of pollution in the world in 1999 without mentioning how to save the
+environment from this pollution are off-topic.
+</narr>
+
+</top>

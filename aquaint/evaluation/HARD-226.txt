@@ -1,0 +1,21 @@
+<top>
+    
+<num> HARD-226 </num>
+    
+<title> Efficiency of computer operating systems </title>
+
+<descr>
+How does efficiency compare among current computer operating systems?
+</descr>
+      
+<narr>
+On-topics include only current personal computer operating
+systems. Prefered documents include statistics on system crashes, bug
+reports, user reviews, and consumer reports. Documents dealing with the
+financial status of leading computer companies and engineers are off-topic,
+as are operating systems for embedded devices, and OSes still in
+development phases. Search should return information
+concerning how completed OSes compare/contrast each other. 
+</narr>
+
+</top>
