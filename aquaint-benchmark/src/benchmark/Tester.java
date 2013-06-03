@@ -1,5 +1,6 @@
 package benchmark;
 
+import java.io.File;
 import java.io.PrintWriter;
 import java.util.List;
 import java.util.Map;
@@ -24,24 +25,21 @@ public class Tester {
 			LogManager.getRootLogger().addAppender(new NullAppender());
 			
 			SolrServer solr = new HttpSolrServer("http://localhost:9090");
-			SolrQuery query = new SolrQuery();
-//			query.setQuery("Boston");
-//			query.setFields("docno", "score");
-//			QueryResponse response = solr.query(query);
-//			SolrDocumentList docList = response.getResults();
-//			for(SolrDocument d : docList){
-//				System.out.println(d.getFieldValue("docno"));
-//				System.out.println(d.getFieldValue("score"));
-//			}
-			
-			TopicParser tp = new TopicParser("/home/dc/Openrel/data/aquaint/evaluation/");
+//			SolrDataInput sdi = new SolrDataInput(solr, "/home/dc/Openrel/data/aquaint/data.txt");
+//			TopicParser tp = new TopicParser("/home/dc/Openrel/data/aquaint/evaluation/");
 //			Map<Integer, Topic> map = tp.getTopics();
-//			for(Integer s : map.keySet())
-//				if(s.equals(70)) System.out.println(s);
 		
-			Set<Integer> tids = ParseUtils.parseQrel("/home/dc/Openrel/data/aquaint/qrels.txt");
-			SolrResultsWriter srw = new SolrResultsWriter(solr, "/home/dc/Openrel/data/aquaint/results.txt");
-			srw.writeResults(tids, tp.getTopics());
+//			Set<Integer> tids = ParseUtils.parseQrel("/home/dc/Openrel/data/aquaint/qrels.txt");
+//			SolrQueryMaker srw = new SolrQueryMaker(solr, "/home/dc/Openrel/data/aquaint/results.txt");
+//			srw.writeResults(tids, tp.getTopics());
+			
+			String qrels = "/home/dc/Openrel/data/aquaint/qrels.txt";
+			String results = "/home/dc/Openrel/data/aquaint/results.txt";
+			TrecEvaluator evaluator = new TrecEvaluator(qrels, results);
+			System.out.println(evaluator.evaluateAll("P10"));
+			System.out.println(evaluator.evaluateQuery(69, "P10"));
+			
+			
 		}catch(Exception e){
 			e.printStackTrace();
 		}
