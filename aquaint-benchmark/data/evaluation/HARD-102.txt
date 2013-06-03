@@ -1,0 +1,18 @@
+<top>
+    
+<num> HARD-102 </num>
+    
+<title> Microsoft monopoly </title>
+	
+<descr>
+In what ways does Microsoft hold a monopoly power on computer systems?
+</descr>
+      
+<narr>
+Information about the antitrust case brought against Miscrosoft
+and the results of the trial are on topic. Articles that specify how much
+Microsoft actually controls in terms of computer systems, are on
+topic. Other anti-trust cases are off-topic. 
+</narr>
+
+</top>

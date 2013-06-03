@@ -1,0 +1,18 @@
+<top>
+   
+<num> HARD-051 </num>
+    
+<title> Hate Crimes Prevention </title>
+
+<descr>
+Why was the Hate Crimes Prevention Act enacted and how has it
+improved the protection of an individual's civil rights?
+</descr>
+      
+<narr>
+The reasons behind the creation of this act and its effect on
+society and the legal system are on-topic. Documents restricted to hate crimes, with no mention of the
+Act, are off-topic. 
+</narr>
+
+</top>

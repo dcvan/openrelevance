@@ -1,0 +1,16 @@
+<top>
+    
+<num> HARD-203 </num>
+    
+<title> Prostitution </title>
+
+<descr>
+What effect does prostitution (legal or otherwise) have on
+national economies and societies? 
+</descr>
+      
+<narr>
+On-topic documents might address some of the following issues 1. Sexually transmitted diseases 2. Sexual abuse / coercion 3. Tippel Zone, Holland 4. Sex education 5. Women's education
+</narr>
+
+</top>

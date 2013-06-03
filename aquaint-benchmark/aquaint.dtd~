@@ -1,0 +1,42 @@
+<!ELEMENT  DOC   	 (DOCNO* 
+                           , DOCTYPE*
+                           , DATE_TIME* 
+                           , HEADER*  
+                           , BODY*
+                           , TRAILER*)                          >
+
+<!-- fields of "DOC" -->
+<!ELEMENT  DOCNO   (#PCDATA)                             >
+<!ELEMENT  DOCTYPE (#PCDATA)                             >
+<!ELEMENT  TXTTYPE (#PCDATA)                             >
+<!ELEMENT  DATE_TIME (#PCDATA)                             >
+<!ELEMENT  HEADER    (#PCDATA)                             >
+<!ELEMENT  BODY      (#PCDATA)				    >
+<!ELEMENT  TRAILER   (#PCDATA)                             >
+
+<!-- fields of "BODY" -->
+<!ELEMENT  SLUG       (#PCDATA)                             >
+<!ELEMENT  HEADLINE   (#PCDATA)                             >
+<!ELEMENT  CATEGORY   (#PCDATA)                             >
+<!ELEMENT  TEXT       (#PCDATA)                             >
+
+<!--fields of "TEXT" -->  
+<!ELEMENT  P          (#PCDATA)                             >
+<!ELEMENT  SUBHEAD    (#PCDATA)                             >
+<!ELEMENT  ANNOTATION (#PCDATA)                             >
+
+<!--Entities -->
+<!ENTITY   AMP     "" >
+<!ENTITY   Cx14    "" >
+<!ENTITY   Cx13    "" >
+<!ENTITY   Cx12    "" >
+<!ENTITY   Cx11    "" >
+<!ENTITY   Cx1f    "" >
+<!ENTITY   HT      "" >
+<!ENTITY   QL      "" >
+<!ENTITY   QR      "" >
+<!ENTITY   LR      "" >
+<!ENTITY   UR      "" >
+<!ENTITY   QC      "" >
+
+

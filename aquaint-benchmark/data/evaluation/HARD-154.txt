@@ -1,0 +1,15 @@
+<top>
+    
+<num> HARD-154 </num>
+    
+<title> Instant messaging  </title>
+
+<descr>
+How have instant messaging services caused vocabulary and spelling to shift or change in users worldwide? 
+</descr>
+      
+<narr>
+Information about educational strategies to combat a growing change in spelling and vocabulary usage due to IM services are on-topic. Articles concerning this aspect of spoken and written language worldwide are on-topic. Documents restricted to new trends in technology are off-topic.
+</narr>
+
+</top>

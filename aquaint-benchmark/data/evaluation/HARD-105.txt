@@ -1,0 +1,18 @@
+<top>
+    
+<num> HARD-105 </num>
+    
+<title> Healthy tea </title>
+
+<descr>
+In what ways do certain kinds of tea protect people from illness?
+</descr>
+      
+<narr>
+Information about the kinds of tea that can prevent or stave off
+illness (and which kinds of illness) are on topic. Articles about various
+cultural traditions associated with tea due to its curative powers are
+on-topic. 
+</narr>
+
+</top>

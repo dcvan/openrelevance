@@ -1,0 +1,20 @@
+<top>
+    
+<num> HARD-176 </num>
+    
+<title> Geo-Politics of War </title>
+
+<descr>
+How has war in the past decade helped shape geo-political
+boundaries of conflicting nations?
+</descr>
+      
+<narr>
+Articles about war or military conflict between countries are
+on-topic as long as they include the resulting geo-polital boundary of each
+involved party. Articles that show statistics of war are not
+on-topic. Articles about countries threatening others of waging wars
+against them are off-topic. 
+</narr>
+
+</top>

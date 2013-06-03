@@ -1,0 +1,18 @@
+<top>
+    
+<num> HARD-044 </num>
+    
+<title> Amusement Park Safety </title>
+
+<descr>
+Why was the National Amusement Park Ride Safety Act enacted?
+</descr>
+      
+<narr>
+All reasons behind this act, and the sections of the bill are on
+topic. Information about the ways theme parks had to change as a result of
+this act are on-topic.
+
+</narr>
+
+</top>

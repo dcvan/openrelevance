@@ -1,0 +1,15 @@
+<top>
+    
+<num> HARD-222 </num>
+    
+<title> Corporate Mergers </title>
+
+<descr>
+What have been the leading causes of corporate mergers and what has been the reaction of labor unions and the general public to  industry consolidation?
+</descr>
+      
+<narr>
+Documents that focus on the types of companies that merged as well as the reasons for those mergers are on-topic. Sources detailing the reaction of organized labor and of the general populace to mergers are also on-topic, as are documents that describe the economic processes that lead to consolidation. However, documents that report on legislation created to combat monopoly companies should not be included.  
+</narr>
+
+</top>

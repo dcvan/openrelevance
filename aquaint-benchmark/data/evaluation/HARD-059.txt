@@ -1,0 +1,17 @@
+<top>
+    
+<num> HARD-059 </num>
+    
+<title> Alexandria's New Library </title>
+
+
+<descr>
+What is the value of Alexandria's new library?
+</descr>
+      
+<narr>
+Information about Alexandria's old library is not on topic. Information about contributions
+in rebuilding the library, and its value are on topic.
+</narr>
+
+</top>

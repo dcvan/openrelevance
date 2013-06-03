@@ -1,0 +1,60 @@
+<!DOCTYPE AQUAINT[
+
+<!--   SGML DESCRIPTIONS         -->
+<!--   +     Required and repeatable element -->
+<!--   ?     Optional element                -->
+<!--   *     Optional and repeatable element -->
+<!--   ,     elements must follow in this order  -->
+<!--   |     "or" connector (pick one element)   -->
+<!--   &     "and" connector (all must occur in any order)   -->
+
+<!--       ELEMENT     S E  CONTENT                          -->
+
+<!-- top level -->      
+<!ELEMENT  AQUAINT     O O  (DOC+)                              >
+
+<!-- fields of DOC -->
+<!ELEMENT  DOC         - -  (DOCNO* 
+                           & DOCTYPE*
+                           & DATE_TIME* 
+                           & HEADER*  
+                           & BODY*
+                           & TRAILER*)                          >
+
+<!-- fields of "DOC" -->
+<!ELEMENT  DOCNO       - -  (#PCDATA)                             >
+<!ELEMENT  DOCTYPE     - -  (#PCDATA)                             >
+<!ELEMENT  TXTTYPE     - -  (#PCDATA)                             >
+<!ELEMENT  DATE_TIME   - -  (#PCDATA)                             >
+<!ELEMENT  HEADER      - -  (#PCDATA)                             >
+<!ELEMENT  BODY        - -  (SLUG* | CATEGORY* | HEADLINE* | TEXT* | #PCDATA)+ >
+<!ELEMENT  TRAILER     - -  (#PCDATA)                             >
+
+<!-- fields of "BODY" -->
+<!ELEMENT  SLUG        - -  (#PCDATA)                             >
+<!ELEMENT  HEADLINE    - -  (#PCDATA)                             >
+<!ELEMENT  CATEGORY    - -  (#PCDATA)                             >
+<!ELEMENT  TEXT        - -  (P* | SUBHEAD* | ANNOTATION* | #PCDATA)+ >
+
+<!--fields of "TEXT" -->  
+<!ELEMENT  P           - O  (#PCDATA)                             >
+<!ELEMENT  SUBHEAD     - -  (#PCDATA)                             >
+<!ELEMENT  ANNOTATION  - -  (#PCDATA)                             >
+
+<!--Entities -->
+<!ENTITY   AMP     "&" >
+<!ENTITY   Cx14    "" >
+<!ENTITY   Cx13    "" >
+<!ENTITY   Cx12    "" >
+<!ENTITY   Cx11    "" >
+<!ENTITY   Cx1f    "" >
+<!ENTITY   HT      "" >
+<!ENTITY   QL      "" >
+<!ENTITY   QR      "" >
+<!ENTITY   LR      "" >
+<!ENTITY   UR      "" >
+<!ENTITY   QC      "" >
+<!ENTITY #DEFAULT SYSTEM >
+
+]>
+

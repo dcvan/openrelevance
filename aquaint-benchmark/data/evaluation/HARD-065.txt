@@ -1,0 +1,17 @@
+<top>
+    
+<num> HARD-065 </num>
+    
+<title> Mad Cow disease </title>
+
+<descr>
+How did the world face the Mad Cow disease in 1999?
+</descr>
+      
+<narr>
+All articles about the consequences of that disease, its side effects and how people reacted to them (new research, drugs...)  are on topic.  Articles that contain short definitions of the disease accompanied with any of the above are also on topic.
+
+Long definitions, things that did not happen in 1999, or personal experiences are not on topic.
+</narr>
+
+</top>

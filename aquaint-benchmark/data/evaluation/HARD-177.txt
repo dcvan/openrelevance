@@ -1,0 +1,21 @@
+<top>
+    
+<num> HARD-177 </num>
+    
+<title> Rewriting Indian history </title>
+
+<descr>
+Is there an attempt to rewrite Indian history?
+</descr>
+      
+<narr>
+Examples of on-topic stories may address the following: 
+1. Textbook changes (from the National Curriculum Framework for School Education)
+2. Rashtriya Swayamsewak Sangh (RSS) and Vishwa Hindu Parishad (VHP) statements
+3. Marxist views on Indian history
+4. Bharatiya Janata Party (BJP) government press statements
+5. Ancient historical texts and manuscripts 
+6. Views of Indian historians
+</narr>
+
+</top>
