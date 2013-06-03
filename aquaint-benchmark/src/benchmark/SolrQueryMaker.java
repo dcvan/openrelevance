@@ -47,7 +47,15 @@ public class SolrQueryMaker {
 				Float score = (Float)docList.get(i).getFieldValue("score");
 				results[i] = new Result(docno, score);
 			}
-			Arrays.sort(results, new ResultComparator());
+			
+			Arrays.sort(results, new Comparator<Result>(){
+
+				public int compare(Result arg0, Result arg1) {
+					if(arg0.getScore() > arg1.getScore()) return -1;
+					else return 1;
+				}
+			});
+			
 			for(int i = 0; i < results.length; i ++){
 				writer.printf("%d\t%s\t%s\t%d\t%f\t%s\n", id, "Q0", results[i].getDocno(), i, results[i].getScore(), "STANDARD" );
 			}
@@ -69,15 +77,5 @@ class Result{
 		public float getScore() {
 			return score;
 		}
-	}
-
-class ResultComparator implements Comparator<Result>{
-
-		@Override
-		public int compare(Result o1, Result o2) {
-			if(o1.getScore() > o2.getScore()) return -1;
-			else return 1;
-		}
-		
 	}
 }
