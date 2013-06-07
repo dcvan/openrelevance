@@ -2,8 +2,6 @@ package benchmark;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
-import java.util.Arrays;
-import java.util.Comparator;
 import java.util.Map;
 import java.util.Set;
 
@@ -28,7 +26,9 @@ public class SolrQueryMaker {
 		String query = topMap.get(tid).getTitle();
 		SolrQuery params = new SolrQuery();
 		params.setFields("docno", "score");
-		params.setQuery("all:" + query);
+		params.set("q", "all:" + "(" + query + ")");
+		params.set("sort", "score desc");
+		params.set("defType", "lucene");
 		params.setRows(12000);
 		QueryResponse response = solr.query(params);
 		if(response == null) 
@@ -41,41 +41,13 @@ public class SolrQueryMaker {
 		PrintWriter writer = new PrintWriter(resultsFile);
 		for(Integer id : tidSet){
 			SolrDocumentList docList = query(id, topMap);
-			Result[] results = new Result[docList.size()];
 			for(int i = 0; i < docList.size(); i ++){
 				String docno = (String)docList.get(i).getFieldValue("docno");
 				Float score = (Float)docList.get(i).getFieldValue("score");
-				results[i] = new Result(docno, score);
-			}
-			
-			Arrays.sort(results, new Comparator<Result>(){
-
-				public int compare(Result arg0, Result arg1) {
-					if(arg0.getScore() > arg1.getScore()) return -1;
-					else return 1;
-				}
-			});
-			
-			for(int i = 0; i < results.length; i ++){
-				writer.printf("%d\t%s\t%s\t%d\t%f\t%s\n", id, "Q0", results[i].getDocno(), i, results[i].getScore(), "STANDARD" );
+				writer.printf("%d\t%s\t%s\t%d\t%f\t%s\n", id, "Q0", docno, i, score, "STANDARD" );
 			}
 		}
 		
 		writer.close();
-	}
-
-class Result{
-		private String docno;
-		private float score;
-		public Result(String docno, float score){
-			this.docno = docno;
-			this.score = score;
-		}
-		public String getDocno() {
-			return docno;
-		}
-		public float getScore() {
-			return score;
-		}
 	}
 }
