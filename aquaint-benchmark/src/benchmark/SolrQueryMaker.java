@@ -26,10 +26,12 @@ public class SolrQueryMaker {
 		String query = topMap.get(tid).getTitle();
 		SolrQuery params = new SolrQuery();
 		params.setFields("docno", "score");
-		params.set("q", "all:" + "(" + query + ")");
+		params.set("defType", "edismax");
+		params.set("q", query);
+		params.set("qf", "body^10 text^10");
 		params.set("sort", "score desc");
-		params.set("defType", "lucene");
-		params.setRows(12000);
+		
+		params.setRows(14000);
 		QueryResponse response = solr.query(params);
 		if(response == null) 
 			throw new RuntimeException("Shouldn't be null");

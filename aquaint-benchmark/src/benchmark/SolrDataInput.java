@@ -14,6 +14,7 @@ import java.util.List;
 import javax.xml.stream.XMLEventReader;
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamException;
+import javax.xml.stream.events.EndElement;
 import javax.xml.stream.events.StartElement;
 import javax.xml.stream.events.XMLEvent;
 
@@ -107,9 +108,10 @@ public class SolrDataInput {
 		XMLEventReader xer = xif.createXMLEventReader(
 				new ByteArrayInputStream(xmlDoc.getBytes("UTF-8")));																															 
 		AquaintDocument adoc = new AquaintDocument();
+		String text = new String();
 		
 		while(xer.hasNext()){
-			XMLEvent event = xer.nextEvent();
+			XMLEvent event = xer.nextEvent();			
 			if(event.isStartElement()){
 				StartElement se = event.asStartElement();
 				if(se.getName().getLocalPart().equals("DOCNO")){
@@ -120,6 +122,11 @@ public class SolrDataInput {
 					event = xer.nextEvent();
 					if(event.isCharacters())
 					adoc.setDoctype(event.asCharacters().getData().trim());
+				}
+				if(se.getName().getLocalPart().equals("TXTTYPE")){
+					event = xer.nextEvent();
+					if(event.isCharacters())
+					adoc.setTxttype(event.asCharacters().getData().trim());
 				}
 				if(se.getName().getLocalPart().equals("DATE_TIME")){
 					event = xer.nextEvent();
@@ -150,15 +157,41 @@ public class SolrDataInput {
 					if(event.isCharacters())
 						adoc.setHeadline(event.asCharacters().getData().trim());
 				}
-				if(se.getName().getLocalPart().equals("TEXT")){
+				if(se.getName().getLocalPart().equals("TEXT")
+						|| se.getName().getLocalPart().equals("P")){
 					event = xer.nextEvent();
 					if(event.isCharacters())
-						adoc.setText(event.asCharacters().getData().trim());
+						text += event.asCharacters().getData().trim() + "\n";
+					if(event.isStartElement()){
+						StartElement tse = event.asStartElement();
+						if(tse.getName().getLocalPart().equals("P")){
+							event = xer.nextEvent();
+							if(event.isCharacters())
+								text += event.asCharacters().getData().trim() + "\n";
+						}
+					}
+				}
+				if(se.getName().getLocalPart().equals("SUBHEAD")){
+					event = xer.nextEvent();
+					if(event.isCharacters())
+						adoc.setSubhead(event.asCharacters().getData().trim());
+				}
+				if(se.getName().getLocalPart().equals("ANNOTATION")){
+					event = xer.nextEvent();
+					if(event.isCharacters())
+						adoc.setAnnotation(event.asCharacters().getData().trim());
 				}
 				if(se.getName().getLocalPart().equals("TRAILER")){
 					event = xer.nextEvent();
 					if(event.isCharacters())
-					adoc.setTrailer(event.asCharacters().getData().trim());
+						adoc.setTrailer(event.asCharacters().getData().trim());
+				}
+			} 
+			else if(event.isEndElement()){
+				EndElement ee = event.asEndElement();
+				if(ee.getName().getLocalPart().equals("TEXT")){
+					adoc.setText(text);
+					text = new String();
 				}
 			}
 		}

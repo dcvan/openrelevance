@@ -9,11 +9,17 @@ public class AquaintDocument {
 		@Field("docno")
 		private String docno;
 		
+		@Field("txttype")
+		private String txttype;
+		
 		@Field("doctype")
  		private String doctype;
 		
 		@Field("datetime")
 		private Date datetime;
+		
+		@Field("body")
+		private String body;
 		
 		@Field("header")
 		private String header;
@@ -29,6 +35,12 @@ public class AquaintDocument {
 		
 		@Field("text")
 		private String text;
+		
+		@Field("subhead")
+		private String subhead;
+		
+		@Field("annotation")
+		private String annotation;
 		
 		@Field("trailer")
 		private String trailer;
@@ -86,6 +98,30 @@ public class AquaintDocument {
 		}
 		public void setTrailer(String trailer) {
 			this.trailer = trailer;
+		}
+		public String getTxttype() {
+			return txttype;
+		}
+		public void setTxttype(String txttype) {
+			this.txttype = txttype;
+		}
+		public String getBody() {
+			return body;
+		}
+		public void setBody(String body) {
+			this.body = body;
+		}
+		public String getSubhead() {
+			return subhead;
+		}
+		public void setSubhead(String subhead) {
+			this.subhead = subhead;
+		}
+		public String getAnnotation() {
+			return annotation;
+		}
+		public void setAnnotation(String annotation) {
+			this.annotation = annotation;
 		}
 		
 }

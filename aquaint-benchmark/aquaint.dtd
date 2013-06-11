@@ -11,14 +11,14 @@
 <!ELEMENT  TXTTYPE (#PCDATA)                             >
 <!ELEMENT  DATE_TIME (#PCDATA)                             >
 <!ELEMENT  HEADER    (#PCDATA)                             >
-<!ELEMENT  BODY      (#PCDATA)				    >
+<!ELEMENT  BODY      (#PCDATA | SLUG | HEADLINE | CATEGORY | TEXT)*			>
 <!ELEMENT  TRAILER   (#PCDATA)                             >
 
 <!-- fields of "BODY" -->
 <!ELEMENT  SLUG       (#PCDATA)                             >
 <!ELEMENT  HEADLINE   (#PCDATA)                             >
 <!ELEMENT  CATEGORY   (#PCDATA)                             >
-<!ELEMENT  TEXT       (#PCDATA)                             >
+<!ELEMENT  TEXT       (#PCDATA | P | SUBHEAD | ANNOTATION )*>
 
 <!--fields of "TEXT" -->  
 <!ELEMENT  P          (#PCDATA)                             >

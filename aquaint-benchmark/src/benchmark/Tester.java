@@ -25,13 +25,15 @@ public class Tester {
 			LogManager.getRootLogger().addAppender(new NullAppender());
 			
 			SolrServer solr = new HttpSolrServer("http://localhost:9090");
-//			SolrDataInput sdi = new SolrDataInput(solr, "data/data.txt");
-//			TopicParser tp = new TopicParser("data/evaluation/");
-//			Map<Integer, Topic> map = tp.getTopics();
+//			SolrDataInput sdi = new SolrDataInput(solr, "/home/dc/Data/aquaint/");
+//			sdi.indexData();
+			
+			
+			TopicParser tp = new TopicParser("data/evaluation/");
 		
-//			Set<Integer> tids = ParseUtils.parseQrel("data/qrels.txt");
-//			SolrQueryMaker srw = new SolrQueryMaker(solr, "data/results.txt");
-//			srw.writeResults(tids, tp.getTopics());
+			Set<Integer> tids = ParseUtils.parseQrel("data/qrels.txt");
+			SolrQueryMaker srw = new SolrQueryMaker(solr, "data/results.txt");
+			srw.writeResults(tids, tp.getTopics());
 			
 			String qrels = "data/qrels.txt";
 			String results = "data/results.txt";
