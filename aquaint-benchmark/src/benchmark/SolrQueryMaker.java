@@ -23,15 +23,30 @@ public class SolrQueryMaker {
 	
 	public SolrDocumentList query(int tid, Map<Integer, Topic> topMap) 
 			throws SolrServerException, FileNotFoundException{
-		String query = topMap.get(tid).getTitle();
+		String query = topMap.get(tid).getTitle().trim();
+		String[] subqs = query.split(" ");
+		query = "(" + query + ")||(";
+		for(int i = 0; i < subqs.length; i ++)
+			if(i != subqs.length - 1)
+				query += subqs[i] + "||";
+			else
+				query += subqs[i] + ")";
+		query += "||(";
+		for(int i = 0; i < subqs.length; i ++)
+			if(i != subqs.length - 1)
+				query += subqs[i] + "&&";
+			else
+				query += subqs[i] + ")";
+		
 		SolrQuery params = new SolrQuery();
 		params.setFields("docno", "score");
 		params.set("defType", "edismax");
 		params.set("q", query);
-		params.set("qf", "body^10 text^10");
+		params.set("qf", "headline^10 text^10");
 		params.set("sort", "score desc");
-		
 		params.setRows(14000);
+		
+		System.out.println(params.toString());
 		QueryResponse response = solr.query(params);
 		if(response == null) 
 			throw new RuntimeException("Shouldn't be null");
