@@ -21,7 +21,7 @@ public class ParseUtils {
 			throws IOException{
 				BufferedReader br = new BufferedReader(new FileReader(file));
 				List<String> docs = new ArrayList<String>();
-				String doc = new String(header);
+				StringBuilder doc = new StringBuilder(header);
 				String startElement = "<" + rootName +">";
 				String endElement = "</" + rootName + ">";
 				boolean isStart = false;
@@ -30,14 +30,14 @@ public class ParseUtils {
 					String line = br.readLine();
 					if(line.equals(startElement)) isStart = true;
 					else if(line.equals(endElement)){
-						doc += line;
+						doc.append(line);
 						isStart = false;
-						docs.add(doc);
-						doc = new String(header);
+						docs.add(doc.toString());
+						doc = new StringBuilder(header);
 					}
 					
 					if(isStart)
-						doc += line;
+						doc.append(line);
 				}
 				
 				br.close();

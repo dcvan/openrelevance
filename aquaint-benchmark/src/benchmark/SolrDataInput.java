@@ -108,7 +108,7 @@ public class SolrDataInput {
 		XMLEventReader xer = xif.createXMLEventReader(
 				new ByteArrayInputStream(xmlDoc.getBytes("UTF-8")));																															 
 		AquaintDocument adoc = new AquaintDocument();
-		String text = new String();
+		StringBuilder text = new StringBuilder();
 		
 		while(xer.hasNext()){
 			XMLEvent event = xer.nextEvent();			
@@ -161,13 +161,13 @@ public class SolrDataInput {
 						|| se.getName().getLocalPart().equals("P")){
 					event = xer.nextEvent();
 					if(event.isCharacters())
-						text += event.asCharacters().getData().trim() + "\n";
+						text.append(event.asCharacters().getData().trim()).append("\n");
 					if(event.isStartElement()){
 						StartElement tse = event.asStartElement();
 						if(tse.getName().getLocalPart().equals("P")){
 							event = xer.nextEvent();
 							if(event.isCharacters())
-								text += event.asCharacters().getData().trim() + "\n";
+								text.append(event.asCharacters().getData().trim()).append("\n");
 						}
 					}
 				}
@@ -190,8 +190,8 @@ public class SolrDataInput {
 			else if(event.isEndElement()){
 				EndElement ee = event.asEndElement();
 				if(ee.getName().getLocalPart().equals("TEXT")){
-					adoc.setText(text);
-					text = new String();
+					adoc.setText(text.toString());
+					text = new StringBuilder();
 				}
 			}
 		}
