@@ -1,0 +1,4 @@
+
+1.POST create a collection
+curl -H "Accept: application/json" -H "Content-type: application/json" -d {"name":"Second Collection"} http://localhost:8111/collections
+curl -X DELETE -H "Accept: application/json" -H "Content-type: application/json" -d {"id":"ef1a84b3312044458eb18be9e4a3b5e0"} http://localhost:8111/collections

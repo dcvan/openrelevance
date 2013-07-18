@@ -1,0 +1,4 @@
+
+1.POST create a collection
+curl -H "Accept: application/json" -H "Content-type: application/json" -d {"name":"Second Collection"} http://localhost:8111/collections
+
