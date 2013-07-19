@@ -6,7 +6,9 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
 import java.util.UUID;
 
 import org.json.JSONException;
@@ -37,13 +39,13 @@ public class CollectionsServerResource extends WadlServerResource implements Col
 	
 	public Representation list(){
 		Map<String, Object> result = new HashMap<String, Object>();
-		Map<String, Object> rs = handler.selectAll("COLLECTION");
-		for(int i = 1; i < rs.size(); i ++){
+		Set<Map<String, Object>> rs = handler.selectAll("COLLECTION");
+		Iterator<Map<String, Object>> iter = rs.iterator();
+		while(iter.hasNext()){
+			int i = 1;
 			Map<String, Object> obj = new HashMap<String, Object>();
-			obj.put("id", rs.get("id"));
-			obj.put("name", rs.get("name"));
-			obj.put("uri", rs.get("uri"));
-			result.put("c" + i, obj);
+			obj.putAll(iter.next());
+			result.put("c" + i ++, obj);
 		}
 			
 		if(result.isEmpty())

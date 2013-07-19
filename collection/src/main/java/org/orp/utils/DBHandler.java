@@ -7,7 +7,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.Types;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 public class DBHandler {
 	Connection c;
@@ -26,8 +28,8 @@ public class DBHandler {
 		return new DBHandler(c);
 	}
 	
-	public Map<String, Object> selectAll(String tabName){
-		Map<String, Object> result = new HashMap<String, Object>();
+	public Set<Map<String, Object>> selectAll(String tabName){
+		Set<Map<String, Object>> result = new HashSet<Map<String, Object>>();
 		try{
 			 ResultSet rs = stmt.executeQuery("SELECT * FROM " + tabName);
 			 result = toResultMap(rs);
@@ -38,33 +40,35 @@ public class DBHandler {
 		return result;
 	}
 	
-	public Map<String, Object> toResultMap(ResultSet rs) 
+	public Set<Map<String, Object>> toResultMap(ResultSet rs) 
 			throws SQLException{
-		Map<String, Object> result = new HashMap<String, Object>();
+		Set<Map<String, Object>> result = new HashSet<Map<String, Object>>();
 		Map<String, Integer> schema = getSchema(rs);
 		while(rs.next()){
+			Map<String, Object> row = new HashMap<String, Object>();
 			for(String col : schema.keySet()){
 				int type = schema.get(col);
 				if(type == Types.VARCHAR
 						|| type == Types.CHAR
 						|| type == Types.LONGNVARCHAR
 						|| type == Types.LONGVARCHAR)
-					result.put(col, rs.getString(col));
+					row.put(col, rs.getString(col));
 				else if(type == Types.INTEGER
 						|| type == Types.BIGINT)
-					result.put(col, rs.getInt(col));
+					row.put(col, rs.getInt(col));
 				else if(type == Types.FLOAT)
-					result.put(col, rs.getFloat(col));
+					row.put(col, rs.getFloat(col));
 				else if(type == Types.DOUBLE
 						|| type == Types.DECIMAL)
-					result.put(col, rs.getDouble(col));
+					row.put(col, rs.getDouble(col));
 				else if(type == Types.DATE)
-					result.put(col, rs.getDate(col));
+					row.put(col, rs.getDate(col));
 				else{
-					result = null;
+					row = null;
 					throw new SQLException("Unsupported type: " + type);
 				}
 			}
+			result.add(row);
 		}
 		
 		return result;
