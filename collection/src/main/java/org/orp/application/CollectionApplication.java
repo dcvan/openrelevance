@@ -6,8 +6,8 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-import org.orp.server.CollectionServerResource;
-import org.orp.server.CollectionsServerResource;
+import org.orp.servers.CollectionServerResource;
+import org.orp.servers.CollectionsServerResource;
 import org.restlet.Restlet;
 import org.restlet.ext.wadl.WadlApplication;
 import org.restlet.routing.Router;

@@ -11,5 +11,5 @@ public interface CollectionResource {
 	public Representation present();
 	
 	@Put
-	public void store(Representation entity);
+	public Representation store(Representation entity);
 }
